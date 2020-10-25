@@ -4,6 +4,10 @@ namespace GameLibrary
 {
     internal interface IRotate
     {
-        void Rotate(Vector3 direction);
+        float Speed { get; set; }
+        float UpRotate { set; }
+        float SideRotate { set; }
+        Vector2 MaxRotation { get; set; }
+        Vector2 MinRotation { get; set; }
     }
 }
