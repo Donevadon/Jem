@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MockSubjectInteract : MonoBehaviour, ISubjectInteraction
+namespace GameLibrary.Interactions.Testing
 {
-    public void Interact()
+    public class MockSubjectInteract : MonoBehaviour, ISubjectInteraction
     {
-        print("Чё то делаю");
+        public InteractionEntity Type { get; }
+
+        public void Interact()
+        {
+            print("Чё то делаю");
+        }
     }
 }

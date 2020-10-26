@@ -5,8 +5,7 @@ namespace GameLibrary
 {
     public interface IInteraction
     {
-        IInteractEvent InteractEvent { set; }
-        void FindInteractObject(Collider o);
+        void IdentifyFoundObject (Collider o);
         void RemoveInteractObject(Collider o);
     }
 }

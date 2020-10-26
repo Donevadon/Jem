@@ -1,4 +1,8 @@
-﻿internal interface ISubjectInteraction
+﻿namespace GameLibrary.Interactions
 {
-    void Interact();
+    public interface ISubjectInteraction
+    {
+        InteractionEntity Type { get; }
+        void Interact();
+    }
 }

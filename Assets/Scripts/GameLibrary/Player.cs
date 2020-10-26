@@ -6,7 +6,7 @@ using UnityEngine.PlayerLoop;
 
 namespace GameLibrary
 {
-    public class Player : MonoBehaviour,IInteractEvent
+    public class Player : MonoBehaviour
     {
         private IMove movement;
         private IRotate rotation;
@@ -35,7 +35,6 @@ namespace GameLibrary
             try
             {
                 interaction = GetComponent<IInteraction>() ?? throw new System.Exception("Компонент взаимодействия отсутствует");
-                interaction.InteractEvent = this;
             }catch(Exception ex)
             {
                 print(ex.Message);
@@ -58,15 +57,5 @@ namespace GameLibrary
             }
         }
         #endregion
-
-        private void OnTriggerEnter(Collider other)
-        {
-            interaction.FindInteractObject(other);
-        }
-
-        private void OnTriggerExit(Collider other)
-        {
-            interaction.RemoveInteractObject(other);
-        }
     }
 }
