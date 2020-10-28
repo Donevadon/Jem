@@ -1,6 +1,6 @@
 ﻿namespace GameLibrary.Interactions
 {
-    struct Task
+    internal struct Task
     {
         public readonly InteractionEntity interactionEntity;
         public readonly string taskMessage;

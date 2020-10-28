@@ -12,10 +12,6 @@ namespace GameLibrary
         private IRotate rotation;
         private IInteraction interaction;
 
-        public bool IsSubscriber => InteractPressed != null;
-
-        public event EventHandler InteractPressed;
-
         private void Awake()
         {
             try
@@ -53,9 +49,19 @@ namespace GameLibrary
             rotation.SideRotate = Input.GetAxis("Mouse X");
             if (Input.GetButton("Use"))
             {
-                InteractPressed?.Invoke(this,new EventArgs());
+                interaction.InvokeInteract(this);
             }
         }
         #endregion
+
+        private void OnTriggerEnter(Collider other)
+        {
+            interaction.StartSearchingInteractiveObject(other);
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            interaction.StopSearch(other);
+        }
     }
 }

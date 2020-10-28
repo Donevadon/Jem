@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,9 +9,11 @@ namespace GameLibrary.Interactions.Entity
     {
         public InteractionEntity Type => InteractionEntity.MusicPlayer;
 
-        public void Interact()
-        {
+        public bool IsActive => throw new NotImplementedException();
 
+        public void Interact(object sender, EventArgs args)
+        {
+            throw new NotImplementedException();
         }
 
         // Start is called before the first frame update

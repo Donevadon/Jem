@@ -1,8 +1,11 @@
-﻿namespace GameLibrary.Interactions
+﻿using System;
+
+namespace GameLibrary.Interactions
 {
     public interface ISubjectInteraction
     {
         InteractionEntity Type { get; }
-        void Interact();
+        bool IsActive { get; }
+        void Interact(object sender, EventArgs args);
     }
 }

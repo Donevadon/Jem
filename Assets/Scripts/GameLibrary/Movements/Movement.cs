@@ -13,6 +13,7 @@ namespace GameLibrary.Movement
         public float SideAcceleration { get; set; }
         [SerializeField] private float speed = 5;
         public float Speed { get => speed; set => speed = value; }
+        private float gravityForce;
 
         private void Awake()
         {
@@ -49,7 +50,12 @@ namespace GameLibrary.Movement
         }
         private Vector3 PullGravity(Vector3 position)
         {
-            position.y = 0;
+            if (!controller.isGrounded)
+            {
+                gravityForce -= 20f * Time.deltaTime;
+            }
+            else gravityForce = -1f;
+            position.y = gravityForce;
             return position;
         }
         #endregion

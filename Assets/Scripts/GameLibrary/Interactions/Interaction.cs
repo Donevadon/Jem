@@ -1,28 +1,24 @@
-﻿using GameLibrary;
-using System;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices.ComTypes;
 using UnityEngine;
-
+using Display = GameLibrary.Interactions.GraphicDisplay.Display;
 
 namespace GameLibrary.Interactions
 {
-    public interface IFindInteractionObject
+    internal interface IGraphicDisplay
     {
-        ISubjectInteraction GetInteractObject();
+        void ShowInteractPrepared();
+        void CleanUpInteractPrepared();
     }
-    public class Interaction : MonoBehaviour, IInteraction, IInteractEvent
+    public class Interaction : MonoBehaviour, IInteraction, IIntegrable
     {
-        public bool IsSubscriber => interactPressed != null;
-
         private Queue<Task> tasks;
-        private float rayDistance = 0.5f;
-        private ISubjectInteraction selectSubject = null;
-        private IFindInteractionObject findInteraction;
+        private IPointerToInteractObject pointer;
+        private IGraphicDisplay display;
+        private Coroutine search;
 
         private event EventHandler interactPressed;
-        public event EventHandler InteractPressed 
+        public event EventHandler Interact_Pressed
         {
             add 
             {
@@ -30,7 +26,7 @@ namespace GameLibrary.Interactions
             }
             remove
             {
-                interactPressed -= value;
+                interactPressed = null;
             }
         }
 
@@ -51,62 +47,51 @@ namespace GameLibrary.Interactions
             tasks.Enqueue(new Task(InteractionEntity.RifleInCase));
             tasks.Enqueue(new Task(InteractionEntity.Rifle));
         }
+        //TODO:Отделить работу с тасками
 
-        public void IdentifyFoundObject(Collider o)
+        public void StartSearchingInteractiveObject(Collider collider)
         {
-            try
+            if (collider.GetComponent<ISubjectInteraction>() != null)
             {
-                ISubjectInteraction foundObject = o?.GetComponent<ISubjectInteraction>() ?? throw new NotFoundInteractExeption();
-                if(foundObject.Type == tasks.Peek().interactionEntity)
-                {
-                    ISubjectInteraction foundObjectWithRay = findInteraction.GetInteractObject();
-
-                }
-            }
-            catch (NotFoundInteractExeption ex)
-            {
-                return;
+                pointer = new PointerToInteractiveObject(this);
+                pointer.Interact_Prepared += PointerInteractPrepared;
+                pointer.Interact_NotPrepared += PointerInteractNotPrepared;
+                search = StartCoroutine(pointer.FindInteractObject(tasks.Peek()));
             }
         }
 
-        private IEnumerator FindObject()
+        private void PointerInteractNotPrepared(object sender, EventArgs e)
         {
-            RaycastHit hit;
-            while (true)
+            display = Display.GetInstance();
+            display.CleanUpInteractPrepared();
+        }
+
+        private void PointerInteractPrepared(object sender, EventArgs e)
+        {
+            display = Display.GetInstance();
+            display.ShowInteractPrepared();
+        }
+
+        public void StopSearch(Collider collider)
+        {
+            if (collider.GetComponent<ISubjectInteraction>() != null)
             {
-                //Запуск луча из центра экрана
-                var ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-                ISubjectInteraction subject = null;
-                if (Physics.Raycast(new Ray(ray.origin, ray.direction * rayDistance), out hit))
-                {
-                    subject = hit.collider.gameObject?.GetComponent<ISubjectInteraction>();
-                    if (subject != null && (subject != selectSubject || !InteractEvent.IsSubscriber))
-                    {
-                        //При наличии нужного таргета
-                        InteractEvent.InteractPressed += EnterHadler;
-                        selectSubject = subject;
-                    }
-                    else if (subject is null && InteractEvent.IsSubscriber)
-                    {
-                        //При наличии стороннего таргета, и наличии подписки
-                        InteractEvent.InteractPressed -= EnterHadler;
-                    }
-                }
-                else if (InteractEvent.IsSubscriber)
-                {
-                    //При отсутствии таргета ,но наличии подписчиков
-                    InteractEvent.InteractPressed -= EnterHadler;
-                }
-                yield return new WaitForSeconds(0.1f);
+                pointer.Interact_Prepared -= PointerInteractPrepared;
+                pointer.Interact_NotPrepared -= PointerInteractNotPrepared;
+                StopCoroutine(search);
+                PointerInteractNotPrepared(this,null);
+                pointer = null;
             }
         }
 
-        private void OnTriggerStay(Collider other)
+        public void InvokeInteract(object sender)
         {
-            if(other.GetComponent<ISubjectInteraction>() != null)
-            {
-                findInteraction.GetInteractObject();
-            }
+            interactPressed?.Invoke(sender,null);
+        }
+
+        public void ResetEvent()
+        {
+            interactPressed = null;
         }
     }
 }

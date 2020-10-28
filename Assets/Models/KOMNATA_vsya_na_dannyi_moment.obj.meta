@@ -1,0 +1,401 @@
+fileFormatVersion: 2
+guid: 23e7c44b3aa78744896c6f67b9724766
+ModelImporter:
+  serializedVersion: 20101
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bed_low_back_lowMat
+    second: {fileID: 2100000, guid: aab1cd13b064f3540a62106c92aeaf94, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bed_low_down_lowMat
+    second: {fileID: 2100000, guid: eca2dffb12040ba48aae41fb85ae4ce8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bed_low_pod1_lowMat
+    second: {fileID: 2100000, guid: 2fde69bb420afff419467fd3af1d228a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bed_low_pod2_lowMat
+    second: {fileID: 2100000, guid: d7258c8ec1debc14386407499b42b102, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bed_low_pod3_lowMat
+    second: {fileID: 2100000, guid: b1f1e09922103144990bc2c760c4d276, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bed_low_pod4_lowMat
+    second: {fileID: 2100000, guid: 02c23007b4bc66d48abccdd11ba82f1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bed_low_pod5_lowMat
+    second: {fileID: 2100000, guid: fb2990fbdcb375c4786157a9d21014a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: kruschka_pCube2Mat
+    second: {fileID: 2100000, guid: 99a190dcea387ce4b874d16693d1be2f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: od_low_bed_lowMat
+    second: {fileID: 2100000, guid: 3fbde65293bee684ab3f85effed39d41, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_g_down_low_grammofon_lowMat
+    second: {fileID: 2100000, guid: cecae0c5c2266b547807c2deb80f36c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_grammofon_low_g_disk_lowMat
+    second: {fileID: 2100000, guid: cecae0c5c2266b547807c2deb80f36c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_grammofon_low_g_ruchka_lowMat
+    second: {fileID: 2100000, guid: cecae0c5c2266b547807c2deb80f36c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_grammofon_low_g_system_lowMat
+    second: {fileID: 2100000, guid: cecae0c5c2266b547807c2deb80f36c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_grammofon_low_g_up_lowMat
+    second: {fileID: 2100000, guid: cecae0c5c2266b547807c2deb80f36c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_grammofon_low_g_zakl_lowMat
+    second: {fileID: 2100000, guid: cecae0c5c2266b547807c2deb80f36c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_kof_low_kof1_lowMat
+    second: {fileID: 2100000, guid: 3b82d6ad3724dff45a40ee9124958bae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_kof_low_kof3_lowMat
+    second: {fileID: 2100000, guid: 3b82d6ad3724dff45a40ee9124958bae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_kof_low_kof4_lowMat
+    second: {fileID: 2100000, guid: 3b82d6ad3724dff45a40ee9124958bae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_kof_low_kof_lowMat
+    second: {fileID: 2100000, guid: 3b82d6ad3724dff45a40ee9124958bae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_kover_low_kover_fibers_lowMat
+    second: {fileID: 2100000, guid: b3cdd2b796c1916478b328a5b90a031d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_kover_low_kover_lowMat
+    second: {fileID: 2100000, guid: b3cdd2b796c1916478b328a5b90a031d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_kover_low_kover_okont_lowMat
+    second: {fileID: 2100000, guid: b3cdd2b796c1916478b328a5b90a031d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_picture2_low_picturesMat
+    second: {fileID: 2100000, guid: 1ba204a22db4eef499c3d405786be39b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_pictures_picture1_lowMat
+    second: {fileID: 2100000, guid: 03b85d937ed2ed14ba4bd3c336ce4f36, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_pictures_picture3_lowMat
+    second: {fileID: 2100000, guid: 77a649ac81c0b7b4d99fb784b49396be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_plant1_low_gor1_lowMat
+    second: {fileID: 2100000, guid: 222e8787e8aaa60448b099cc316ee3e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_plant1_low_gor2_lowMat
+    second: {fileID: 2100000, guid: 222e8787e8aaa60448b099cc316ee3e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_plant1_low_list_lowMat
+    second: {fileID: 2100000, guid: 222e8787e8aaa60448b099cc316ee3e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_plant1_low_zeml_lowMat
+    second: {fileID: 2100000, guid: 222e8787e8aaa60448b099cc316ee3e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_plant2_lowMat
+    second: {fileID: 2100000, guid: 47b959f6ddec7534cb467ad672d29384, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_plant3_list_low_plant3_lowMat
+    second: {fileID: 2100000, guid: ecc3fc8bbf66a0c469702435f6deb6f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_plant3_low_plant3_gor_lowMat
+    second: {fileID: 2100000, guid: ecc3fc8bbf66a0c469702435f6deb6f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_plant3_low_plant3_k1_lowMat
+    second: {fileID: 2100000, guid: ecc3fc8bbf66a0c469702435f6deb6f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_plant3_low_plant3_k2_lowMat
+    second: {fileID: 2100000, guid: ecc3fc8bbf66a0c469702435f6deb6f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_plant3_low_plant3_k3_lowMat
+    second: {fileID: 2100000, guid: ecc3fc8bbf66a0c469702435f6deb6f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_polka_kniga1_low_polka_lowMat
+    second: {fileID: 2100000, guid: 173cbb19ab7bcd147802e1b5d352eb4e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_polka_low_polka_doski_lowMat
+    second: {fileID: 2100000, guid: 173cbb19ab7bcd147802e1b5d352eb4e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_polka_low_polka_kniga2_lowMat
+    second: {fileID: 2100000, guid: 173cbb19ab7bcd147802e1b5d352eb4e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_polka_low_polka_kniga3_lowMat
+    second: {fileID: 2100000, guid: 173cbb19ab7bcd147802e1b5d352eb4e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_polka_low_polka_shur_lowMat
+    second: {fileID: 2100000, guid: 173cbb19ab7bcd147802e1b5d352eb4e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_polka_low_polka_steel_lowMat
+    second: {fileID: 2100000, guid: 173cbb19ab7bcd147802e1b5d352eb4e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_stol_l1_low_stol_lowMat
+    second: {fileID: 2100000, guid: 5deed28c2a5b24746b04672e6e9a944c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_stol_low_stol_glass1_lowMat
+    second: {fileID: 2100000, guid: 5deed28c2a5b24746b04672e6e9a944c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_stol_low_stol_glass2_lowMat
+    second: {fileID: 2100000, guid: 5deed28c2a5b24746b04672e6e9a944c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_stol_low_stol_l2_lowMat
+    second: {fileID: 2100000, guid: 5deed28c2a5b24746b04672e6e9a944c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_stol_low_stol_lowMat
+    second: {fileID: 2100000, guid: 5deed28c2a5b24746b04672e6e9a944c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_stol_low_stol_nogi_lowMat
+    second: {fileID: 2100000, guid: 5deed28c2a5b24746b04672e6e9a944c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_stolik1_low_stolik_lowMat
+    second: {fileID: 2100000, guid: b3f64c4558a62324a9b35dc95458e610, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_stolik_low_stolik2_lowMat
+    second: {fileID: 2100000, guid: b3f64c4558a62324a9b35dc95458e610, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_stolik_low_stolik3_lowMat
+    second: {fileID: 2100000, guid: b3f64c4558a62324a9b35dc95458e610, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_stolik_low_stolik4_lowMat
+    second: {fileID: 2100000, guid: b3f64c4558a62324a9b35dc95458e610, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_stolik_low_stolik5_lowMat
+    second: {fileID: 2100000, guid: b3f64c4558a62324a9b35dc95458e610, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_stolik_low_stolik6_lowMat
+    second: {fileID: 2100000, guid: b3f64c4558a62324a9b35dc95458e610, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_stvol_low_plant1_lowMat
+    second: {fileID: 2100000, guid: 222e8787e8aaa60448b099cc316ee3e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube2_tumba_lowMat
+    second: {fileID: 2100000, guid: a505c6221fd40384eb4d04fead33ca9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ramka_main_lowMat
+    second: {fileID: 2100000, guid: 020253b2c62637343a8858dd11fdc342, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ramka_main_low_ramka1_lowMat
+    second: {fileID: 2100000, guid: 020253b2c62637343a8858dd11fdc342, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ramka_main_low_ramka1_low_glass1Mat
+    second: {fileID: 2100000, guid: 5232e231582ada04eafc39f63f958b8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ramka_main_low_ramka2_lowMat
+    second: {fileID: 2100000, guid: 020253b2c62637343a8858dd11fdc342, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ramka_main_low_ramka2_low_glass2Mat
+    second: {fileID: 2100000, guid: 5232e231582ada04eafc39f63f958b8d, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
