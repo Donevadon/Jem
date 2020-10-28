@@ -16,7 +16,7 @@ namespace GameLibrary
         {
             try
             {
-                movement = GetComponent<IMove>() ?? throw new System.Exception("Компонент передвижения не установлен");
+                movement = GetComponentInParent<IMove>() ?? throw new System.Exception("Компонент передвижения не установлен");
             }catch(Exception ex)
             {
                 print(ex.Message);

@@ -41,12 +41,12 @@ namespace GameLibrary.Movement
 
         private Vector3 MoveForward()
         {
-            return transform.TransformDirection(Vector3.forward) * ForwardAcceleration * Speed;
+            return Camera.main.transform.TransformDirection(Vector3.forward) * ForwardAcceleration * Speed;
         }
 
         private Vector3 MoveSide()
         {
-            return transform.TransformDirection(Vector3.right) * SideAcceleration * Speed;
+            return Camera.main.transform.TransformDirection(Vector3.right) * SideAcceleration * Speed;
         }
         private Vector3 PullGravity(Vector3 position)
         {
