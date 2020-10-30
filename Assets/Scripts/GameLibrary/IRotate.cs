@@ -2,7 +2,7 @@
 
 namespace GameLibrary
 {
-    internal interface IRotate
+    public interface IRotate
     {
         float Speed { get; set; }
         float UpRotate { set; }

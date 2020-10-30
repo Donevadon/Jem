@@ -8,24 +8,19 @@ namespace GameLibrary.Interactions.Entity
     public class MusicPlayer : MonoBehaviour, ISubjectInteraction
     {
         public InteractionEntity Type => InteractionEntity.MusicPlayer;
+        [SerializeField]private AudioSource audioSource;
+        [SerializeField] private AudioClip speech;
 
-        public bool IsActive => throw new NotImplementedException();
+        public bool IsActive { get; private set; } = true;
 
         public void Interact(object sender, EventArgs args)
         {
-            throw new NotImplementedException();
-        }
-
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            audioSource.Play();
+            IsActive = false;
+            MonoBehaviour player = sender as MonoBehaviour;
+            AudioSource sourcePlayer = player.GetComponent<AudioSource>();
+            sourcePlayer.clip = speech;
+            sourcePlayer.Play();
         }
     }
 }

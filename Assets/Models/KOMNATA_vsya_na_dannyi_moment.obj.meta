@@ -42,8 +42,53 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: chehol_chehol_downMat
+    second: {fileID: 2100000, guid: 358cd904c2b84484cafae2d272a17e9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chehol_rifle_in_chehol1Mat
+    second: {fileID: 2100000, guid: 358cd904c2b84484cafae2d272a17e9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chehol_up_cheholMat
+    second: {fileID: 2100000, guid: 358cd904c2b84484cafae2d272a17e9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fixture_low_leuka_lowMat
+    second: {fileID: 2100000, guid: e9e31fdf5a951ee458fc3dacbea7f039, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: kruschka_pCube2Mat
     second: {fileID: 2100000, guid: 99a190dcea387ce4b874d16693d1be2f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: leuka_low_body_lowMat
+    second: {fileID: 2100000, guid: e9e31fdf5a951ee458fc3dacbea7f039, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: leuka_low_bolt_lowMat
+    second: {fileID: 2100000, guid: e9e31fdf5a951ee458fc3dacbea7f039, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: leuka_low_handleside_lowMat
+    second: {fileID: 2100000, guid: e9e31fdf5a951ee458fc3dacbea7f039, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: leuka_low_handletop_lowMat
+    second: {fileID: 2100000, guid: e9e31fdf5a951ee458fc3dacbea7f039, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: leuka_low_holes_lowMat
+    second: {fileID: 2100000, guid: e9e31fdf5a951ee458fc3dacbea7f039, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

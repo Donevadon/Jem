@@ -10,6 +10,7 @@ namespace GameLibrary.Testing
         public float Speed { get => speed; set => speed = value; }
         public float ForwardAcceleration { get; set; }
         public float SideAcceleration { get; set; }
+        public Transform DirectionObject { set => throw new System.NotImplementedException(); }
 
         private MockMove()
         {

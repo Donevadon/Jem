@@ -9,12 +9,22 @@ namespace GameLibrary.Interactions
     {
         void ShowInteractPrepared();
         void CleanUpInteractPrepared();
+        void UpdateTask(Task task);
+    }
+    internal interface ITasksManager
+    {
+        Task Peek();
+        Task Dequeue();
     }
     public class Interaction : MonoBehaviour, IInteraction, IIntegrable
     {
-        private Queue<Task> tasks;
         private IPointerToInteractObject pointer;
+        private ITasksManager tasksManager = new TaskManager();
         private IGraphicDisplay display;
+        private ISubjectInteraction ActiveObject;
+        private bool isActive;
+
+
         private Coroutine search;
 
         private event EventHandler interactPressed;
@@ -23,6 +33,12 @@ namespace GameLibrary.Interactions
             add 
             {
                 interactPressed = value;
+                interactPressed += (x, y) =>
+                {
+                    tasksManager.Dequeue();
+                    display.UpdateTask(tasksManager.Peek());
+                    pointer.Task = tasksManager.Peek();
+                };
             }
             remove
             {
@@ -32,61 +48,56 @@ namespace GameLibrary.Interactions
 
         private void Awake()
         {
-            CreateTaskList();
+            pointer = new PointerToInteractiveObject(this);
         }
 
-        private void CreateTaskList()
+        private void Start()
         {
-            tasks = new Queue<Task>();
-            tasks.Enqueue(new Task(InteractionEntity.MusicPlayer));
-            tasks.Enqueue(new Task(InteractionEntity.CoffeeMachine));
-            tasks.Enqueue(new Task(InteractionEntity.Cup));
-            tasks.Enqueue(new Task(InteractionEntity.Window));
-            tasks.Enqueue(new Task(InteractionEntity.Flowers));
-            tasks.Enqueue(new Task(InteractionEntity.GuitarCase));
-            tasks.Enqueue(new Task(InteractionEntity.RifleInCase));
-            tasks.Enqueue(new Task(InteractionEntity.Rifle));
+            display = Display.GetInstance();
+            display.UpdateTask(tasksManager.Peek());
+            pointer.Task = tasksManager.Peek();
+
         }
-        //TODO:Отделить работу с тасками
 
         public void StartSearchingInteractiveObject(Collider collider)
         {
-            if (collider.GetComponent<ISubjectInteraction>() != null)
+            ISubjectInteraction obj = collider?.GetComponent<ISubjectInteraction>();
+            if (obj != null && isActive == false)
             {
-                pointer = new PointerToInteractiveObject(this);
+                isActive = true;
+                ActiveObject = obj;
                 pointer.Interact_Prepared += PointerInteractPrepared;
                 pointer.Interact_NotPrepared += PointerInteractNotPrepared;
-                search = StartCoroutine(pointer.FindInteractObject(tasks.Peek()));
+                search = StartCoroutine(pointer.FindInteractObject()); 
             }
         }
 
         private void PointerInteractNotPrepared(object sender, EventArgs e)
         {
-            display = Display.GetInstance();
             display.CleanUpInteractPrepared();
         }
 
         private void PointerInteractPrepared(object sender, EventArgs e)
         {
-            display = Display.GetInstance();
             display.ShowInteractPrepared();
         }
 
         public void StopSearch(Collider collider)
         {
-            if (collider.GetComponent<ISubjectInteraction>() != null)
+            if (collider.GetComponent<ISubjectInteraction>() == ActiveObject)
             {
                 pointer.Interact_Prepared -= PointerInteractPrepared;
                 pointer.Interact_NotPrepared -= PointerInteractNotPrepared;
                 StopCoroutine(search);
+                isActive = false;
                 PointerInteractNotPrepared(this,null);
-                pointer = null;
             }
         }
 
         public void InvokeInteract(object sender)
         {
             interactPressed?.Invoke(sender,null);
+            interactPressed = null;
         }
 
         public void ResetEvent()

@@ -7,7 +7,7 @@ namespace GameLibrary.Interactions.Testing
 {
     public class MockSubjectInteract : MonoBehaviour, ISubjectInteraction
     {
-        public InteractionEntity Type => InteractionEntity.MusicPlayer;
+        public InteractionEntity Type => InteractionEntity.CoffeeMachine;
 
         public bool IsActive { get; private set; } = true;
 

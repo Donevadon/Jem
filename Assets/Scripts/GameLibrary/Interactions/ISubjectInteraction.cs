@@ -8,4 +8,9 @@ namespace GameLibrary.Interactions
         bool IsActive { get; }
         void Interact(object sender, EventArgs args);
     }
+
+    public interface IActivateSubjectInteraction : ISubjectInteraction
+    {
+        void Activate();
+    }
 }

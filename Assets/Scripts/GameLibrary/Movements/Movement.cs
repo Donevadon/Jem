@@ -13,6 +13,9 @@ namespace GameLibrary.Movement
         public float SideAcceleration { get; set; }
         [SerializeField] private float speed = 5;
         public float Speed { get => speed; set => speed = value; }
+
+        public Transform DirectionObject { private get; set; }
+
         private float gravityForce;
 
         private void Awake()
@@ -22,6 +25,7 @@ namespace GameLibrary.Movement
 
         private void Update()
         {
+            if(DirectionObject != null)
             Move();
         }
 
@@ -29,7 +33,6 @@ namespace GameLibrary.Movement
         private void Move()
         {
             controller.Move(GetPosition() * Time.deltaTime);
-
         }
 
         private Vector3 GetPosition()
@@ -41,12 +44,12 @@ namespace GameLibrary.Movement
 
         private Vector3 MoveForward()
         {
-            return Camera.main.transform.TransformDirection(Vector3.forward) * ForwardAcceleration * Speed;
+            return DirectionObject.TransformDirection(Vector3.forward) * ForwardAcceleration * Speed;
         }
 
         private Vector3 MoveSide()
         {
-            return Camera.main.transform.TransformDirection(Vector3.right) * SideAcceleration * Speed;
+            return DirectionObject.TransformDirection(Vector3.right) * SideAcceleration * Speed;
         }
         private Vector3 PullGravity(Vector3 position)
         {

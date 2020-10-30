@@ -2,13 +2,19 @@
 {
     public enum InteractionEntity
     {
+        Rise,
         MusicPlayer,
         CoffeeMachine,
         Cup,
         Window,
-        Flowers,
+        WateringCan,
+        FirstFlower,
+        SecondFlower,
+        ThirdFlower,
         GuitarCase,
         RifleInCase,
-        Rifle
+        Windowsill,
+        Rifle,
+        KillAll
     }
 }

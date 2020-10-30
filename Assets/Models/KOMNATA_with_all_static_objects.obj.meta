@@ -1,0 +1,236 @@
+fileFormatVersion: 2
+guid: b83571a1d19faa34b8293cf3c98f69c0
+ModelImporter:
+  serializedVersion: 20101
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bed_lowMat
+    second: {fileID: 2100000, guid: aab1cd13b064f3540a62106c92aeaf94, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: clock_lowMat
+    second: {fileID: 2100000, guid: fb6f1845d8ce8f148ada0205680a66ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: decor3_vaza_lowMat
+    second: {fileID: 2100000, guid: 147bd3ec94831fc42ab247a1b9dd1f12, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: decor_na_stole1Mat
+    second: {fileID: 2100000, guid: 955674cd9c6b2574ebe3d342f340e9ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: decor_na_stole2Mat
+    second: {fileID: 2100000, guid: 41b837a9b73c91a4e8cf0e8bad12de54, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: kitchenMat
+    second: {fileID: 2100000, guid: b37bd3853cf4552439c69a169d51edcb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: komnataMat
+    second: {fileID: 2100000, guid: 2623fdf1cd223354b884620e450b21d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: koverMat
+    second: {fileID: 2100000, guid: b3cdd2b796c1916478b328a5b90a031d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lamp_on_tableMat
+    second: {fileID: 2100000, guid: 8c78b15004e784d40a483d98835bff73, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lampochkiMat
+    second: {fileID: 2100000, guid: 747db941688ec3d499b513ada0ccabf0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lamps_potolokMat
+    second: {fileID: 2100000, guid: 321ab3fda879a4d40a1326578600c8f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lukMat
+    second: {fileID: 2100000, guid: 5b01728b273d6cb42bb756ede76366f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: picture1_lowMat
+    second: {fileID: 2100000, guid: 03b85d937ed2ed14ba4bd3c336ce4f36, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: picture2_lowMat
+    second: {fileID: 2100000, guid: 1ba204a22db4eef499c3d405786be39b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: picture3_lowMat
+    second: {fileID: 2100000, guid: 77a649ac81c0b7b4d99fb784b49396be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plakatMat
+    second: {fileID: 2100000, guid: d9fae7414e894144f99363b0da0f9775, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: polkaMat
+    second: {fileID: 2100000, guid: 173cbb19ab7bcd147802e1b5d352eb4e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: potolok_lowMat
+    second: {fileID: 2100000, guid: 4e5d1e088c2ff204e9cd3a259d4f83bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shkaf_detaliMat
+    second: {fileID: 2100000, guid: b59917cd3982bce469266ec8e3559755, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shkaf_lowMat
+    second: {fileID: 2100000, guid: 2f2cbc455cbff934d81c7396a2735033, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stolMat
+    second: {fileID: 2100000, guid: 5deed28c2a5b24746b04672e6e9a944c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stolikMat
+    second: {fileID: 2100000, guid: b3f64c4558a62324a9b35dc95458e610, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stulMat
+    second: {fileID: 2100000, guid: f743d9e9462dc8b4b8c2cda0da96199a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tumba_lowMat
+    second: {fileID: 2100000, guid: a505c6221fd40384eb4d04fead33ca9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: utochkaMat
+    second: {fileID: 2100000, guid: bfa0c3d0c8b95ff43916bb3d97028b9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: utvar1Mat
+    second: {fileID: 2100000, guid: 6aa2b386fc63b334d8af4efb680d1a1e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: utvar2Mat
+    second: {fileID: 2100000, guid: d8b7cc848aa020e40987d33d32153f85, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

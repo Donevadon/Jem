@@ -6,17 +6,26 @@ using UnityEngine.PlayerLoop;
 
 namespace GameLibrary
 {
-    public class Player : MonoBehaviour
+    public interface IShoot
+    {
+        void Shoot();
+    }
+    public class Player : MonoBehaviour,IChangeBehavior
     {
         private IMove movement;
         private IRotate rotation;
         private IInteraction interaction;
+        private IShoot shoot;
+        public GameObject Pointer;
+        public GameObject RiflePointer;
+        public AudioClip FinalClip;
 
         private void Awake()
         {
             try
             {
                 movement = GetComponentInParent<IMove>() ?? throw new System.Exception("Компонент передвижения не установлен");
+                movement.DirectionObject = Camera.main.transform;
             }catch(Exception ex)
             {
                 print(ex.Message);
@@ -28,6 +37,7 @@ namespace GameLibrary
             {
                 print(ex.Message);
             }
+
             try
             {
                 interaction = GetComponent<IInteraction>() ?? throw new System.Exception("Компонент взаимодействия отсутствует");
@@ -39,7 +49,8 @@ namespace GameLibrary
         #region Управление
         private void Update()
         {
-            Control();
+            if(movement != null && rotation != null)
+                Control();
         }
         private void Control()
         {
@@ -47,9 +58,13 @@ namespace GameLibrary
             movement.SideAcceleration = Input.GetAxis("Horizontal");
             rotation.UpRotate = Input.GetAxis("Mouse Y");
             rotation.SideRotate = Input.GetAxis("Mouse X");
-            if (Input.GetButton("Use"))
+            if (Input.GetButtonDown("Use"))
             {
                 interaction.InvokeInteract(this);
+            }
+            if (Input.GetMouseButtonDown(0))
+            {
+                shoot?.Shoot();
             }
         }
         #endregion
@@ -62,6 +77,43 @@ namespace GameLibrary
         private void OnTriggerExit(Collider other)
         {
             interaction.StopSearch(other);
+        }
+
+        public void ChangeMove(IMove move)
+        {
+            movement.ForwardAcceleration = 0;
+            movement.SideAcceleration = 0;
+            movement = move;
+        }
+
+        public void ChangeRotate(IRotate rotate)
+        {
+            rotation = rotate;
+        }
+
+        public void ChangePointer()
+        {
+            Pointer.SetActive(!Pointer.activeSelf);
+            RiflePointer.SetActive(!RiflePointer.activeSelf);
+        }
+
+        public void Move(Vector3 position)
+        {
+            StartCoroutine(Moving(position));
+        }
+
+        private IEnumerator Moving(Vector3 position)
+        {
+            while(transform.position != position)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, position, 3 * Time.deltaTime);
+                yield return new WaitForFixedUpdate();
+            }
+        }
+
+        public void ChangeShoot(IShoot shoot)
+        {
+            this.shoot = shoot;
         }
     }
 }
